@@ -22,26 +22,6 @@
                 </button>
                 <a class="navbar-brand" href="#">Intranet</a>
             </div>
-            <!--
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>--><!--/.nav-collapse -->
         </div>
     </nav>
     
@@ -52,61 +32,13 @@
         </div>
         
         <div class="box row" id="sistemas-container">
-            
-            <!-- Estrutura do HTML que será exibido
-            <div class="col-md-3">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"> site </h3>
-                    </div>
-                    <div class="panel-body">
-                        url
-                    </div>
-                </div>
-            </div> 
-            -->
         </div>
     </div>  
     
+    <script src="./src/sites.js"></script>
     <script src="./src/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
-    <script>
-        
-        const container = document.getElementById('sistemas-container');
-        
-        sistemas.forEach(sistema => {
-            // Cria a estrutura do painel
-            const colDiv = document.createElement('div');
-            colDiv.className = 'col-md-3';
-            
-            const panelDiv = document.createElement('div');
-            panelDiv.className = 'panel panel-default';
-            
-            const panelHeading = document.createElement('div');
-            panelHeading.className = 'panel-heading';
-            const headingTitle = document.createElement('h3');
-            headingTitle.className = 'panel-title text-center';
-            headingTitle.textContent = sistema.site;
-            
-            const panelBody = document.createElement('div');
-            panelBody.className = 'panel-body text-center';
-            const link = document.createElement('a');
-            link.href = sistema.url;
-            link.textContent = "Clique aqui";
-            link.target = '_blank'; // Abre o link em uma nova aba
-            
-            // Monta a estrutura do painel
-            panelHeading.appendChild(headingTitle);
-            panelBody.appendChild(link);
-            panelDiv.appendChild(panelHeading);
-            panelDiv.appendChild(panelBody);
-            colDiv.appendChild(panelDiv);
-            
-            // Adiciona o painel ao container
-            container.appendChild(colDiv);
-        });
-    </script>
 </body>
 </html>
